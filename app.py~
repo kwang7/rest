@@ -1,0 +1,15 @@
+import urllib2, json
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+coolStuff = urllib2.open('https://api.nasa.gov/planetary/apod?api_key=jLVNWeyJx4FB8wdTZZhdUK9qcSEmdSKynyIAaTVF')
+@app.route("/")
+def nasa():
+    return 'h'
+
+
+
+if __name__ == "__main__":
+    app.debug = True
+    app.run()
