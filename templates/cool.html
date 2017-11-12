@@ -6,8 +6,13 @@
   </head>
   <body>
     <font face = "Arial" color='orange'> 
-      {{space}}
-      <img src= {{pic}} width = 1000px>
+      {{summary}}
+      <br>
+      {% set messages = get_flashed_messages() %}
+      {% for message in messages %}
+      <br> {{ message | safe }}
+      {% endfor %}
+      
     </font>
   </body>
 </html>
